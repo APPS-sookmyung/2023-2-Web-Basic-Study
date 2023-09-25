@@ -1,0 +1,19 @@
+.bold {
+  color: red;
+  font-weight: bold;
+}
+
+* {
+  box-sizing: content-box;
+}
+
+#my-name {
+  color: blueviolet;
+  font-family: "Anton", sans-serif;
+}
+
+a {
+  color: rgb(190, 169, 132);
+  text-decoration: coral;
+  text-decoration: overline;
+}
