@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+#container {
+  margin: 0 auto;
+  width: 1200px;
+}
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #b00;
+}
+#logo {
+  float: left;
+  width: 250px;
+  height: 100px;
+  line-height: 100px;
+  padding-left: 20px;
+}
+#logo a {
+  text-decoration-line: none;
+}
+#logo h1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  float: right;
+  width: 900px;
+  height: 100px;
+}
+#menu {
+  height: 60px;
+}
+#menu > li {
+  float: left;
+  position: relative;
+}
+#menu > li > a {
+  display: block;
+  font-weight: 600;
+  padding: 20px 60px;
+  text-shadow: none;
+}
+#menu a {
+  text-decoration-line: none;
+}
+a[target="_blank"] {
+  color: white;
+}
+.white {
+  color: white;
+}
+#contents img {
+  width: 400px;
+  height: 430px;
+  margin: auto;
+  display: block;
+  padding-top: 50px;
+}
+#contents h2 {
+  text-align: center;
+  color: rgb(80, 80, 80);
+  margin-bottom: 20px;
+}
+#bottomMenu p {
+  font-size: 14px;
+  color: #aaa;
+}
+#bottomMenu {
+  clear: left;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+footer {
+  width: 100%;
+  height: 100px;
+  border-top: 2px solid #b00;
+  margin-top: 20px;
+}
+#info blockquote {
+  text-align: center;
+  color: rgb(80, 80, 80);
+  font-size: 20px;
+}
+#info blockquote cite {
+  color: lightgray;
+  font-size: smaller;
+}
