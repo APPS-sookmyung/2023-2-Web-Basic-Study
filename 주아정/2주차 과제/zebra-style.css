@@ -1,4 +1,4 @@
-#font {
+.font_serif {
   font-family: "serif";
 }
 
@@ -25,6 +25,6 @@ tr:nth-child(odd) {
   background-color: #eee;
 }
 
-.italic {
+#italic_quotation {
   font-style: italic;
 }
