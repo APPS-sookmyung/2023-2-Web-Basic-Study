@@ -1,0 +1,30 @@
+.font_serif {
+  font-family: "serif";
+}
+
+tr > th {
+  /* 테이블 헤더 행 */
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+td {
+  /* 테이블 표 부분 */
+  border: 1px solid black;
+  padding: 5px; /* 너무 붙어있는 것 같아 조건에는 없지만 임의로 간격을 조정해보았습니다. */
+}
+
+* {
+  font-family: "sans-serif";
+}
+
+/* 홀수 행 테이블 표 */
+tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+#italic_quotation {
+  font-style: italic;
+}
