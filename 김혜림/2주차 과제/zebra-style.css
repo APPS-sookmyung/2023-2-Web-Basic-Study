@@ -1,0 +1,28 @@
+td{
+    border:1px solid black;
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+h1{
+    font-family:serif;
+}
+
+th{
+    border:1px solid white;
+    border-collapse: collapse;
+    color:white;
+    background-color: black;
+    font-family:sans-serif
+
+}
+table{
+    border:1px solid black;
+    border-collapse: collapse;
+    font-family:sans-serif
+}
+p{
+    font-style: italic;
+    font-family:serif
+}
+tr:nth-child(even){background-color: #EEE;}
