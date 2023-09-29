@@ -1,11 +1,11 @@
 td{
     border:1px solid black;
     border-collapse: collapse;
-    font-family: serif;
+    font-family: sans-serif;
 }
 
 h1{
-    font-family:sans-serif;
+    font-family:serif;
 }
 
 th{
@@ -13,13 +13,13 @@ th{
     border-collapse: collapse;
     color:white;
     background-color: black;
-    font-family:serif
+    font-family:sans-serif
 
 }
 table{
     border:1px solid black;
     border-collapse: collapse;
-    font-family:serif
+    font-family:sans-serif
 }
 p{
     font-style: italic;
