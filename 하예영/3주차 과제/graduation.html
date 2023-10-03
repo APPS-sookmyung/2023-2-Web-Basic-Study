@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>실습 과제 #2</title>
+    <style>
+      #theForm {
+        display: flex;
+        align-items: flex-start;
+      }
+      #theButtons {
+        display: flex;
+        flex-direction: column;
+      }
+      input {
+        margin: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      자바스크립트 배열의 <code>map</code> 메서드는 항목 배열을 가져와 배열 내
+      각 항목에 함수를 호출하고 함수 호출 결과를 다른 배열에 수집합니다.
+    </p>
+
+    <p>
+      아래 텍스트박스에는 대학원생 목록이 있습니다. Graduate 버튼을 클릭하면
+      모두 박사 학위를 받게 되고, reset 버튼을 클릭하면 다시 원래의 텍스트로
+      돌아옵니다.
+    </p>
+
+    <p>
+      Graduate 버튼의 기능은 유지한 채
+      <code>grantDoctorate</code> 및 <code>graduateEveryone</code> 함수가 모두
+      제거되도록 화살표 함수를 사용하여 코드를 재작성해주세요. <br />
+      화살표 함수가 어떻게 작동하는지 아직 조금 헷갈린다면
+      <code>graduateEveryone</code> 함수를 화살표 함수로 대체하는 것부터 시작한
+      다음 그 작업이 완료된 후에 <code>grantDoctorate</code> 함수를 화살표
+      함수로 대체하는 것이 좋습니다.
+    </p>
+
+    <form id="theForm">
+      <textarea rows="5" cols="20" id="students" readonly>
+Jack Ryan
+Julia Kelly
+Ellie Sattler
+Ian Malcolm
+Emmett Brown
+    </textarea
+      >
+      <div id="theButtons">
+        <input type="button" value="Graduate" id="graduate" />
+        <input type="reset" />
+      </div>
+    </form>
+    <script>
+      var students = [
+        "Jack Ryan",
+        "Julia Kelly",
+        "Ellie Sattler",
+        "Ian Malcolm",
+        "Emmett Brown",
+      ];
+
+      const grantDoctorate = (student) => {
+        return "Dr. " + student;
+      }
+
+      const graduateEveryone= () => {
+        var graduatedArray = students.map((student) => grantDoctorate(student))
+        document.getElementById("students").value = graduatedArray.join("\n");
+      }
+
+      document
+        .getElementById("graduate")
+        .addEventListener("click", graduateEveryone);
+    </script>
+  </body>
+</html>
