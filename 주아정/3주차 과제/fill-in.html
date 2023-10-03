@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>실습 과제 #1</title>
+    <style>
+      #warning {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      함수 <code>warnUser</code>는 웹페이지가 로드된 후 3초 후에 텍스트 필드의
+      배경색을 변경하고 사용자에게 이름을 입력하라는 텍스트 리마인더 : "Fill me
+      in!" 를 추가합니다.
+    </p>
+    <p>
+      이 파일의 소스 코드로 이동하여 함수 <code>warnUser</code>의 함수 표현식을
+      화살표 함수로 대체해주세요.
+    </p>
+    <p>
+      <input type="text" id="textField" />
+      <span id="warning">Fill me in!!!</span>
+    </p>
+    <script>
+      let warnUser = () => {
+        document.getElementById("textField").style.backgroundColor = "red";
+        document.getElementById("warning").style.display = "inline";
+      };
+
+      window.setTimeout(warnUser, 3000);
+    </script>
+  </body>
+</html>
