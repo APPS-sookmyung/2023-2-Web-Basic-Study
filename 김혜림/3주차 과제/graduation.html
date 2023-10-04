@@ -63,16 +63,12 @@ Emmett Brown
         "Emmett Brown",
       ];
 
-      grantDoctorate=(student) => "Dr. " + student;
-
-      graduateEveryone=()=>{
-        var graduatedArray = students.map(grantDoctorate);
-        document.getElementById("students").value = graduatedArray.join("\n");
-      }
-
       document
         .getElementById("graduate")
-        .addEventListener("click", graduateEveryone);
+        .addEventListener=("click",()=>{
+        var graduatedArray=students.map(()=>{student=> "Dr. " + student});
+        document.getElementById("students").value = graduatedArray.join("\n");
+        })
     </script>
   </body>
 </html>
