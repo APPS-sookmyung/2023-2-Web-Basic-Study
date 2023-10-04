@@ -62,10 +62,8 @@ Emmett Brown
         "Emmett Brown",
       ];
 
-      const grantDoctorate = (student) => "Dr. " + student;
-
       const graduateEveryone = () => {
-        const graduatedArray = students.map(grantDoctorate);
+        const graduatedArray = students.map((student) => "Dr. " + student);
         document.getElementById("students").value = graduatedArray.join("\n");
       };
 
