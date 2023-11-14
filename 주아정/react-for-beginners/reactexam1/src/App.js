@@ -4,36 +4,26 @@ import React from "react";
 
 import MyHeader from "./MyHeader";
 import Counter from "./Counter";
+import Container from "./Container";
 
 function App() {
-  let name = "주아정";
-
-  /*
-  const style = {
-    App: {
-      backgroundColor: "black",
-    },
-    h2: {
-      color: "red",
-    },
-    bold_text: {
-      color: "green",
-    },
-  };
-
-  const func = () => {
-    return "func";
-  };
-
-  */
-
   const number = 5;
 
+  const counterProps = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4,
+    e: 5,
+    initialValue: 5,
+  };
   return (
-    <div>
-      <MyHeader />
-      <Counter />
-    </div>
+    <Container>
+      <div>
+        <MyHeader />
+        <Counter {...counterProps} />
+      </div>
+    </Container>
   );
 }
 
