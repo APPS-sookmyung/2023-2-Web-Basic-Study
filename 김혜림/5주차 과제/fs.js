@@ -26,15 +26,16 @@ var handleStat = (err, stat) => {
     return;
   }
   // 아래 코드를 완성해주세요
-  if (stat.isFile()) {
-    console.log();
-  } else {
-    console.log();
-  }
-};
+  if (stat){
+    console.log("getos.js is a file");
+} else {
+  console.log("getos.js is not a file");
+}
+console.log("Okay, we've finished calling statSynch");
+  };
 
-// 아래 코드를 완성해주세요
-fs.stat();
+// 아래 코드를 완성해주세요 
+fs.stat("getos.js",handleStat);
 
 console.log("Okay, we've finished calling stat");
 
