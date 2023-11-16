@@ -5,9 +5,7 @@
 
 // 동기적 처리
 var fs = require("fs");
-var path = require("path");
-var filePath = path.join(__dirname, "getos.js");
-var statSync = fs.statSync(filePath);
+var statSync = fs.statSync("getos.js");
 
 if (statSync.isFile()) {
   console.log("getos.js is a file");
@@ -37,7 +35,7 @@ var handleStat = (err, stat) => {
 };
 
 // 아래 코드를 완성해주세요
-fs.stat(filePath, handleStat);
+fs.stat("getos.js", handleStat);
 
 console.log("Okay, we've finished calling stat");
 
