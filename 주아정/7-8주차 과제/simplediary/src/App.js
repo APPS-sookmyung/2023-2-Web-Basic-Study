@@ -2,13 +2,25 @@ import "./App.css";
 import DiaryEditor from "./DiaryEditor";
 import DiaryList from "./DiaryList";
 
-import { useRef, useState } from "react";
-import Lifecycle from "./Lifecycle";
+import { useEffect, useRef, useState } from "react";
+
+// https://jsonplaceholder.typicode.com/comments
 
 function App() {
   const [data, setData] = useState([]); // 일기 데이터를 전달 -> 배열로 초깃값 설정
 
   const dataId = useRef(0);
+
+  const getData = async () => {
+    const res = await fetch(
+      "https://jsonplaceholder.typicode.com/comments"
+    ).then((res) => res.json());
+    console.log(res);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   const onCreate = (author, content, emotion) => {
     const created_date = new Date().getTime();
@@ -39,7 +51,6 @@ function App() {
 
   return (
     <div className="App">
-      <Lifecycle />
       <DiaryEditor onCreate={onCreate} />
       <DiaryList onEdit={onEdit} onRemove={onRemove} diaryList={data} />
     </div>
